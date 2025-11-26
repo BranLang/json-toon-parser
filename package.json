@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/BranLang/toon-parser#readme",
   "scripts": {
-    "build": "npm run build -w @branlang/toon-parser",
+    "build": "npm run build -w toon-parser",
     "test": "vitest --run",
     "lint": "tsc -b packages/toon-parser",
     "example": "npm run build && npm run start -w json-toon-example"
