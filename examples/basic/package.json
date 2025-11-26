@@ -7,6 +7,6 @@
     "start": "node index.mjs"
   },
   "dependencies": {
-    "toon-parser": "file:../../packages/toon-parser"
+    "@branlang/toon-parser": "file:../../packages/toon-parser"
   }
 }
