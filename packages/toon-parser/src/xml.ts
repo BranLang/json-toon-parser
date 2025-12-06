@@ -1,5 +1,5 @@
 import { XMLParser, X2jOptions } from 'fast-xml-parser';
-import { jsonToToon, JsonToToonOptions } from './index';
+import { jsonToToon, JsonToToonOptions } from './index.js';
 
 export interface XmlToToonOptions extends JsonToToonOptions {
   /**

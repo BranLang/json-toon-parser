@@ -1,5 +1,5 @@
 export type JsonPrimitive = string | number | boolean | null;
-export * from './xml';
+export * from './xml.js';
 
 
 export interface SecurityOptions {
