@@ -25,6 +25,7 @@
   "scripts": {
     "build": "npm run build -w toon-parser",
     "test": "vitest --run",
+    "coverage": "vitest --run --coverage",
     "lint": "tsc -b packages/toon-parser",
     "example": "npm run build && npm run start -w json-toon-example"
   },
