@@ -1,6 +1,6 @@
 {
-  "name": "json-toon-parser-monorepo",
-  "version": "2.0.1",
+  "name": "json-toon-parser",
+  "version": "2.1.0",
   "license": "MIT",
   "private": true,
   "type": "module",
