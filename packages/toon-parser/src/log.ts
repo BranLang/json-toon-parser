@@ -7,7 +7,8 @@ export interface LogToToonOptions extends JsonToToonOptions {
   format?: 'auto' | 'clf' | 'json';
 }
 
-const CLF_REGEX = /^(\S+) - - \[(.*?)\] "(.*?)" (\d+) (\d+)$/;
+// Updated CLF regex to avoid catastrophic backtracking by using negated character classes
+const CLF_REGEX = /^(\S+) - - \[([^\]]*)\] "([^"]*)" (\d+) (\d+)$/;
 
 export function logToToon(logData: string, options: LogToToonOptions = {}): string {
   const lines = logData.split(/\r?\n/).filter(line => line.trim() !== '');
