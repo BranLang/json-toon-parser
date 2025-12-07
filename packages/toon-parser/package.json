@@ -20,11 +20,15 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "build:types": "tsc -p tsconfig.json --emitDeclarationOnly",
     "build:js": "tsc -p tsconfig.json",
-    "build:cjs": "esbuild src/index.ts src/xml.ts src/csv.ts src/html.ts src/log.ts src/url.ts --format=cjs --outdir=dist/cjs --platform=node && node ./scripts/build-copy-cjs-output.js",
+    "build:cjs": "esbuild src/**/*.ts --format=cjs --outdir=dist/cjs --platform=node && node ./scripts/build-copy-cjs-output.js",
     "build": "npm run typecheck && npm run build:types && npm run build:js && npm run build:cjs",
     "clean": "rimraf dist",
     "clean:node": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\"",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "lint": "eslint . --ext .ts,.tsx",
+    "verify-docs": "node scripts/verify-docs.js",
+    "test": "vitest --run",
+    "coverage": "vitest --run --coverage"
   },
   "keywords": [
     "json",
@@ -47,7 +51,10 @@
   "sideEffects": false,
   "devDependencies": {
     "fast-check": "^4.3.0",
-    "rimraf": "^6.0.0"
+    "rimraf": "^6.0.0",
+    "eslint": "^9.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0"
   },
   "engines": {
     "node": ">=18"
