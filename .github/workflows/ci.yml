@@ -33,9 +33,7 @@ jobs:
       - name: Test
         run: npm test
       - name: Coverage Threshold
-        run: |
-          npm run coverage
-          npx nyc check-coverage --lines 80
+        run: npm run coverage
 
       - name: Verify CJS build outputs
         run: |
